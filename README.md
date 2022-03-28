@@ -13,7 +13,7 @@ This project contains code for a trained reinforcement learning agent that solve
 
   
 
-The environment consists of a space in which there are blue and yellow bananas. The goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.
+The environment consists of a space in which there are blue and yellow bananas. The goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.
 
 The state space is an array of 37 elements. It contains the agent's velocity, along with ray-based perception of objects around agent's forward direction, among others. Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
 - **`0`** - move forward.
@@ -21,7 +21,7 @@ The state space is an array of 37 elements. It contains the agent's velocity, al
 - **`2`** - turn left.
 - **`3`** - turn right.
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+The task is episodic, and in order to solve the environment, **the agent must get an average score of +13 over 100 consecutive episodes**.
 
 
 
