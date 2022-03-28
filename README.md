@@ -1,18 +1,21 @@
 [//]: # (Image References)
 
 [image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+[image2]: https://user-images.githubusercontent.com/10624937/42386929-76f671f0-8106-11e8-9376-f17da2ae852e.png "Kernel"
 
-# Project 1: Navigation
+# Navigation for Banana Collector
 
 ### Introduction
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
+This project contains code for a trained reinforcement learning agent that that solves a modified version of the Banana Collector task of UnityML 
 
 ![Trained Agent][image1]
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
+  
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
+The environment consists of a space in which there blue and yellow bananas. Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.
+
+The state space is an array of 37 elements it contains the agent's velocity, along with ray-based perception of objects around agent's forward direction, among others. Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
 - **`0`** - move forward.
 - **`1`** - move backward.
 - **`2`** - turn left.
@@ -20,7 +23,47 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
+
+
 ### Getting Started
+
+#### Dependencies
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+2. Install Openai gym using `pip install gym`.
+3. Install box2d and box2d-py: `pip install box2d`; `pip install box2d-py`. 
+4. Clone the repository (if you haven't already!), and navigate to the `python/` folder.
+```bash
+git clone https://github.com/udacity/Value-based-methods.git
+cd Value-based-methods/python
+```
+5. Replace the requirements.txt file in the `Value-based-methods/python` with the one provided in this repository. The difference is that pytorch has been bumped up to version 1.0.0. from the original 0.4.0 in the folder. Then, install several dependencies with 
+
+```bash
+pip install .
+```
+
+6. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment. 
+
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
+
+7. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu. 
+
+![Kernel][image2]
+
+#### Run code
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
@@ -32,24 +75,11 @@ The task is episodic, and in order to solve the environment, your agent must get
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
-2. Place the file in the course GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+2. Place the file in the environment file in the `p1_navigation/` folder of the `Value-based-methods` cloned in the Dependencies section, and unzip (or decompress) the file.
 
-### Instructions
+3. Copy place the `banana_agent.py`, `banana_model.py`, `checkpoint.pth`, `Navigation.ipynb` files provided in this repository into the `p1_navigation/` folder of the `Value-based-methods` cloned in the Dependencies section. 
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+#### Instructions
 
-### (Optional) Challenge: Learning from Pixels
+Follow the instructions in `Navigation.ipynb` to get started with training your own agent or watch an existing agent provided  in the `checkpoint.pth` file perform the task!
 
-After you have successfully completed the project, if you're looking for an additional challenge, you have come to the right place!  In the project, your agent learned from information such as its velocity, along with ray-based perception of objects around its forward direction.  A more challenging task would be to learn directly from pixels!
-
-To solve this harder task, you'll need to download a new Unity environment.  This environment is almost identical to the project environment, where the only difference is that the state is an 84 x 84 RGB image, corresponding to the agent's first-person view.  (**Note**: Udacity students should not submit a project with this new environment.)
-
-You need only select the environment that matches your operating system:
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Linux.zip)
-- Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana.app.zip)
-- Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86.zip)
-- Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/VisualBanana_Windows_x86_64.zip)
-
-Then, place the file in the `p1_navigation/` folder in the course GitHub repository, and unzip (or decompress) the file.  Next, open `Navigation_Pixels.ipynb` and follow the instructions to learn how to use the Python API to control the agent.
-
-(_For AWS_) If you'd like to train the agent on AWS, you must follow the instructions to [set up X Server](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above.
