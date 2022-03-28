@@ -7,15 +7,15 @@
 
 ### Introduction
 
-This project contains code for a trained reinforcement learning agent that that solves a modified version of the Banana Collector task of UnityML 
+This project contains code for a trained reinforcement learning agent that solves a modified version of the Banana Collector task of UnityML 
 
 ![Trained Agent][image1]
 
   
 
-The environment consists of a space in which there blue and yellow bananas. Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.
+The environment consists of a space in which there are blue and yellow bananas. The goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas. A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.
 
-The state space is an array of 37 elements it contains the agent's velocity, along with ray-based perception of objects around agent's forward direction, among others. Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
+The state space is an array of 37 elements. It contains the agent's velocity, along with ray-based perception of objects around agent's forward direction, among others. Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
 - **`0`** - move forward.
 - **`1`** - move backward.
 - **`2`** - turn left.
@@ -42,12 +42,12 @@ The task is episodic, and in order to solve the environment, your agent must get
 	```
 2. Install Openai gym using `pip install gym`.
 3. Install box2d and box2d-py: `pip install box2d`; `pip install box2d-py`. 
-4. Clone the repository (if you haven't already!), and navigate to the `python/` folder.
+4. Clone the repository below and navigate to the `python/` folder.
 ```bash
 git clone https://github.com/udacity/Value-based-methods.git
 cd Value-based-methods/python
 ```
-5. Replace the requirements.txt file in the `Value-based-methods/python` with the one provided in this repository. The difference is that pytorch has been bumped up to version 1.0.0. from the original 0.4.0 in the folder. Then, install several dependencies with 
+5. Replace the `requirements.txt` file in the `Value-based-methods/python` folder with the one provided in this repository. The difference is that pytorch has been bumped up to version 1.0.0. from version 0.4.0 in the original `Value-based-methods/python`. Then, install several dependencies with 
 
 ```bash
 pip install .
@@ -75,9 +75,11 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
-2. Place the file in the environment file in the `p1_navigation/` folder of the `Value-based-methods` cloned in the Dependencies section, and unzip (or decompress) the file.
+2. Place the environment file in the `p1_navigation/` folder of the `Value-based-methods` folder that was cloned in the Dependencies section, and unzip (or decompress) the file.
 
-3. Copy place the `banana_agent.py`, `banana_model.py`, `checkpoint.pth`, `Navigation.ipynb` files provided in this repository into the `p1_navigation/` folder of the `Value-based-methods` cloned in the Dependencies section. 
+3. Copy the `banana_agent.py`, `banana_model.py`, `checkpoint.pth`, `Navigation.ipynb` files provided in this repository into the `p1_navigation/` folder of the `Value-based-methods` folder that was cloned in the Dependencies section. 
+
+4. Start a jupyter notebook in the `drlnd` environment created in the Dependencies section. Set the kernel to `drlnd` kernel created in the Dependencies section.
 
 #### Instructions
 
