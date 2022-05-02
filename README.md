@@ -47,7 +47,7 @@ The task is episodic, and in order to solve the environment, **the agent must ge
 git clone https://github.com/udacity/Value-based-methods.git
 cd Value-based-methods/python
 ```
-5. Replace the `requirements.txt` file in the `Value-based-methods/python` folder with the one provided in this repository. The difference is that pytorch has been bumped up to version 1.0.0. from version 0.4.0 in the original `Value-based-methods/python`. Then, install several dependencies with 
+5. Replace the `requirements.txt` file in the `Value-based-methods/python` folder with the one provided in this repository. The difference is that pytorch has been bumped up to version 1.0.0. from version 0.4.0 in the original `Value-based-methods/python/requirements.txt` file. Then, install several dependencies with 
 
 ```bash
 pip install .
@@ -63,7 +63,7 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 ![Kernel][image2]
 
-#### Run code
+#### Setup Agent Environment
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
